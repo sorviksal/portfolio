@@ -9,29 +9,25 @@ import {
   Download,
 } from "lucide-react";
 import AnimatedBorderButton from "../components/AnimatedBorderButton";
-
+import { TechGlobe } from "./Skills";
 
 const COLORS = [
   "#ff3b3b", "#3b82f6", "#facc15",
   "#22c55e", "#a855f7", "#06b6d4", "#f97316","#FFFFFF",
 ];
-const skills = [
-  "C++",
-  "C#",
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "React JS",
-  "Tailwind CSS",
-  "Node JS",
-  "ASP.NET Web Api",
-  "ASP.NET MVC",
-  "SQLServer",
-  "PostgreSQl",
-  "MySQL",
-  "Git",
-  "Github",
-];
+// const skills = [
+//   { name: "C#", icon: "https://cdn.simpleicons.org/csharp/68217A" },
+//   { name: "React JS", icon: "https://cdn.simpleicons.org/react/61DAFB" },
+//   { name: "Node JS", icon: "https://cdn.simpleicons.org/nodedotjs/339933" },
+//   { name: "Tailwind", icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4" },
+//   { name: "ASP.NET", icon: "https://cdn.simpleicons.org/dotnet/512BD4" },
+//   { name: "SQLServer", icon: "https://cdn.simpleicons.org/microsoftsqlserver/CC2927" },
+//   { name: "PostgreSQL", icon: "https://cdn.simpleicons.org/postgresql/4169E1" },
+//   { name: "JavaScript", icon: "https://cdn.simpleicons.org/javascript/F7DF1E" },
+//   { name: "HTML5", icon: "https://cdn.simpleicons.org/html5/E34F26" },
+//   { name: "CSS3", icon: "https://cdn.simpleicons.org/css3/1572B6" },
+//   { name: "GitHub", icon: "https://cdn.simpleicons.org/github/FFFFFF" },
+// ];
 export const Hero = () => {
   const [dots] = useState(() =>
     Array.from({ length: 60 }, () => ({
@@ -159,23 +155,10 @@ export const Hero = () => {
                   </div>
                 </div>
              </div>
-                      {/* Skill Section */}
-        <div className="mt-20 animate-fade-in animation-delay-600">
-          <p className="text-sm text-muted-foreground mb-6 text-center">Technologies I work with</p>
-          <div className="relative overflow-hidden">
-            <div className="flex animate-marquee">
-                {[...skills, ...skills].map((skill, idx) => (
-                <div key={idx} className="flex-shrink-0 px-8 py-4">
-                  <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
-                    {skill}
-                  </span>
-                  </div>
-              ))}
-            </div>
-          </div>
-        </div>
+              {/* Skill Section */}
+                    <TechGlobe />
       </div>
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 
         animate-fade-in animation-delay-800"
         >
           <a href="#about"

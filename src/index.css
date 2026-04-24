@@ -55,6 +55,46 @@
           color-mix(in srgb, var(--color-primary) 20%, transparent),
         inset 0 0 20px color-mix(in srgb, var(--color-primary) 5%, transparent);
     }
+/* base */
+.tech-icon {
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.15));
+}
+
+/* hover box */
+.icon-box:hover {
+  transform: scale(1.2);
+  border: 1px solid var(--glow-color);
+}
+
+/* 🌈 colored glow */
+.icon-box:hover .tech-icon {
+  filter:
+    drop-shadow(0 0 10px var(--glow-color))
+    drop-shadow(0 0 20px var(--glow-color))
+    drop-shadow(0 0 35px var(--glow-color));
+  transform: scale(1.1);
+}
+
+/* background glow */
+.icon-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: 0.3s;
+
+  background: radial-gradient(
+    circle,
+    var(--glow-color),
+    transparent 70%
+  );
+}
+
+.icon-box:hover::after {
+  opacity: 0.25;
+}  
 }
 @layer utilities {
     @keyframes fade-in{
@@ -203,4 +243,20 @@
         color-mix(in srgb, var(--color-primary) 35%, transparent),
       0 0 80px color-mix(in srgb, var(--color-primary) 25%, transparent);
   }
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Move half the distance of the doubled array */
+  }
+
+  .animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee 30s linear infinite;
+  }
+  
+  /* Pause on hover for better UX */
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+  
 }
