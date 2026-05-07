@@ -35,6 +35,6 @@ export default defineConfig({
   },
   server: {
     host: true,
-    allowedHosts: ['ssss.sorvisal.site']
+    allowedHosts: ['sssss.sorvisal.site']
   }
 })
