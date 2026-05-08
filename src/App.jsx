@@ -14,14 +14,14 @@ const App = () => {
   return(
  <div className="min-h-screen overflow-x-hidden">
        <Helmet>
-        <title>Sal | Frontend Developer</title>
+        <title>Sal | Prompt Developer</title>
         <meta name="description" content="Portfolio of Sal — a frontend developer building modern web apps with React." />
         <meta name="keywords" content="Sal, React Developer, Frontend Developer, Portfolio, Web Developer" />
         <meta name="author" content="Sal" />
         <link rel="canonical" href="https://sorvisal.site" />
 
         {/* Open Graph (LinkedIn, Facebook previews) */}
-        <meta property="og:title" content="Sal | Frontend Developer" />
+        <meta property="og:title" content="Sal | Prompt Developer" />
         <meta property="og:description" content="Check out my portfolio — projects, experience, and more." />
         <meta property="og:url" content="https://sorvisal.site" />
         <meta property="og:type" content="website" />
@@ -29,7 +29,7 @@ const App = () => {
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Sal | Frontend Developer" />
+        <meta name="twitter:title" content="Sal | Prompt Developer" />
         <meta name="twitter:description" content="Check out my portfolio." />
         <meta name="twitter:image" content="https://yourdomain.com/preview.png" />
       </Helmet>
